@@ -28,7 +28,7 @@ feeds = {'complex': 'https://www.complex.com/index.xml',
 
 @app.route("/<publication>")
 
-def get_news(publication="cnw"):
+def get_news(publication="spm"):
     feed = feedparser.parse(feeds[publication])
     first_article = feed['entries'][0]
     return """<html>
