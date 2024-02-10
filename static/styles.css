@@ -9,19 +9,18 @@ body {
     font-family: sans-serif;
   
 }
-a{color: rgb(72, 83, 182);
+a{text-decoration:none;
+    color:#E9EAEC;
     display: flex; 
     justify-content: space-between;
-    transform: rotate(5deg); 
     scale:(1.1);
     transition: background-color 0.2s ease-in-out; 
     animation: myAnimation 1s;
     display: inline-block; 
-
     position: relative;
     font-family: Arial;
-    border: 1px solid #ccc; font-size: 16px; text-decoration: underline;padding: 5px 10px; margin: 10px;} 
-a:hover {color: blue; background-color: #eee;}:active {color: orange; font-weight: bold;}
+     font-size: 16px;padding: 5px 10px; margin: 10px;} 
+a:hover {color: #1f1f21; border: 1px solid #ccc;background-color: #eee;}:active {color: orange; font-weight: bold;}
 /* Style the headings */
 h1 {
   font-family: "Protest Guerrilla", sans-serif;

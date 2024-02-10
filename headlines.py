@@ -8,7 +8,7 @@ feeds = {'kbc':'https://www.kbc.co.ke/feed/','ntv':'https://ntvkenya.co.ke/feed/
 
 @app.route("/")
 @app.route("/<publication>")
-def get_news(publication="ke"):
+def get_news(publication="pulse"):
     feed = feedparser.parse(feeds[publication])
     return render_template("home.html", articles=feed['entries'])
 
