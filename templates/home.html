@@ -9,7 +9,7 @@
 <div class="articles-container">
 {% for article in articles %}
 <div class="article">
-<b>{{article.title}}</b><br />
+    <b><a href="{{article.link}}">{{article.title}}</a></b><br />
 <i>{{article.published}}</i><br />
 <p>{{article.summary}}</p>
 </div>
