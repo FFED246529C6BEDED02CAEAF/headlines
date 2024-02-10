@@ -1,11 +1,13 @@
 <html>
 <head>
-<title>NNN Headlines</title>
+<title>News Headlines Curated by Collins Paul</title>
 </head>
 <body>
-<h1>News Headlines</h1>
-<b>{{title}}</b><br />
-<i>{{published}}</i><br />
-<p>{{summary}}</p><br />
+<h1>Trending News Headlines</h1>
+{% for article in articles %}
+<b>{{article.title}}</b><br />
+<i>{{article.published}}</i><br />
+<p>{{article.summary}}</p><hr/>
+{% endfor %}
 </body>
 </html>
