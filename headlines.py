@@ -43,7 +43,7 @@ feeds = {'ke':'https://www.kenyans.co.ke/feeds/news/all',
 @app.route("/")
 @app.route("/<publication>")
 
-def get_news(publication="kenyans"):
+def get_news(publication="ke"):
     feed = feedparser.parse(feeds[publication])
     first_article = feed['entries'][0]
     return render_template("home.html",
