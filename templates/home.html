@@ -1,13 +1,19 @@
 <html>
 <head>
 <title>News Headlines Curated by Collins Paul</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
 </head>
 <body>
 <h1>Trending News Headlines</h1>
+<div class="articles-container">
 {% for article in articles %}
+<div class="article">
 <b>{{article.title}}</b><br />
 <i>{{article.published}}</i><br />
-<p>{{article.summary}}</p><hr/>
+<p>{{article.summary}}</p>
+</div>
 {% endfor %}
+</div>
 </body>
 </html>
