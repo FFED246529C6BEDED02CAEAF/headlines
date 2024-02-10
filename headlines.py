@@ -4,7 +4,10 @@ from flask import render_template
 from flask import Flask
 app = Flask(__name__)
 
-feeds = {'ke':'https://www.kenyans.co.ke/feeds/news/all',
+feeds = {'kbc':'https://www.kbc.co.ke/feed/',
+    'ntv':'https://ntvkenya.co.ke/feed/',
+    'nation':'https://nation.africa/kenya/rss.xml',
+    'ke':'https://www.kenyans.co.ke/feeds/news/all',
     'politco':'https://www.politico.com/rss/politicopicks.xml',
          'complex': 'https://www.complex.com/index.xml',
          'nytimes':'https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml',
@@ -45,8 +48,7 @@ feeds = {'ke':'https://www.kenyans.co.ke/feeds/news/all',
 
 def get_news(publication="ke"):
     feed = feedparser.parse(feeds[publication])
-    first_article = feed['entries'][0]
-    return render_template("home.html", article=first_article)
+    return render_template("home.html", articles=feed['entries'])
 
 if __name__ == "__main__":
     app.run(port=5000, debug=True)
