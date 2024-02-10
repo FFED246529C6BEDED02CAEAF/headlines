@@ -4,10 +4,11 @@ from flask import render_template
 from flask import Flask
 app = Flask(__name__)
 
-feeds = {'ptc':'https://www.politico.com/rss/politicopicks.xml',
-         'cpl': 'https://www.complex.com/index.xml',
-         'nyt':'https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml',
-         'alj':'https://www.aljazeera.com/xml/rss/all.xml',
+feeds = {'ke':'https://www.kenyans.co.ke/feeds/news/all',
+    'politco':'https://www.politico.com/rss/politicopicks.xml',
+         'complex': 'https://www.complex.com/index.xml',
+         'nytimes':'https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml',
+         'aljazeera':'https://www.aljazeera.com/xml/rss/all.xml',
          'ft':'https://www.ft.com/rss/home',
          'bd':'https://www.businessdailyafrica.com/service/rss/bd/1939132/feed.rss',
          'celeb-net':'https://www.celebritynetworth.com/category/articles/feed/',
