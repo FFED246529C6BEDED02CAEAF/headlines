@@ -46,10 +46,7 @@ feeds = {'ke':'https://www.kenyans.co.ke/feeds/news/all',
 def get_news(publication="ke"):
     feed = feedparser.parse(feeds[publication])
     first_article = feed['entries'][0]
-    return render_template("home.html",
-                           title=first_article.get("title"),
-                           published=first_article.get("published"),
-                           summary=first_article.get("summary"))
+    return render_template("home.html", article=first_article)
 
 if __name__ == "__main__":
     app.run(port=5000, debug=True)
