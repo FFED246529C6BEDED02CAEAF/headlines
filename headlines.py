@@ -5,7 +5,7 @@ feeds = {'thevergescience': 'https://www.theverge.com/rss/science/index.xml',
 'thevergespace': 'https://www.theverge.com/rss/space/index.xml',
 'thevergestreaming-wars': 'https://www.theverge.com/rss/streaming-wars/index.xml',
 'thevergefilm':'https://www.theverge.com/rss/film/index.xml',
-'thevergeai': 'https://www.wired.com/feed/tag/ai/latest/rss'}
+'wiredai': 'https://www.wired.com/feed/tag/ai/latest/rss'}
 
 @app.route("/")
 @app.route("/<publication>")
