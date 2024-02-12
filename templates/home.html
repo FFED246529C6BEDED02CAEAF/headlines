@@ -4,8 +4,12 @@
 <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 
 </head>
-<body>
-<h1>Trending News Headlines</h1>
+<form>
+    <body>
+        <h1>Trending News Headlines</h1>
+        <input type="text" name="publication" placeholder="search" />
+        <input type="submit" value="Submit" />
+        </form>
 <div class="articles-container">
 {% for article in articles %}
 <div class="article">
